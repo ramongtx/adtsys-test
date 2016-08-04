@@ -1,5 +1,3 @@
 Rails.application.routes.draw do
-  get "/" => "home#index"
-
-  get "/models" => "models#index"
+  resources :makes, only: %i(index show), :path => '/'
 end

@@ -1,0 +1,5 @@
+<p>
+  <%= label_tag(:id, 'Escolha a Fabricante:') %>
+  <%= select_tag :make_select, options_from_collection_for_select(@makes, :id, :name) %>
+</p>
+<%= button_tag 'Buscar modelos', onclick: "window.location.href = '/' + $('#make_select').val()" %>
